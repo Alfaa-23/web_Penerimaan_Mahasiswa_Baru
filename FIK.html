@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Penerimaan Mahasiswa Baru</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('rektorat.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.7);
+            min-height: 100vh;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 180px;
+        }
+
+        h3 {
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background: white;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            background: rgba(0, 86, 179, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            top: 50px;
+            right: 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .menu select {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background: white;
+            color: #0056b3;
+            cursor: pointer;
+        }
+
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #0056b3;
+            color: white;
+            padding: 12px;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 10px;
+            color: #333;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        tr:hover {
+            background: rgba(0, 86, 179, 0.3);
+            transition: background 0.3s ease;
+        }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function navigate(select) {
+            const value = select.value;
+            if (value) {
+                window.location.href = value;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="overlay">
+    <div class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu">
+            <select onchange="navigate(this)">
+                <option value="">Pilih Menu</option>
+                <option value="index.html">Menu Utama</option>
+                <option value="FT.html">Fakultas Teknik</option>
+                <option value="FBS.html">Fakultas Bahasa dan Seni</option>
+                <option value="FIP.html">Fakultas Ilmu Pendidikan</option>
+                <option value="FMIPA.html">Fakultas Matematika dan Ipa</option>
+                <option value="FIS.html">Fakultas Ilmu Sosial</option>
+                <option value="FIK.html">Fakultas Ilmu Keolahragaan</option>
+                <option value="FEB.html">Fakultas Ekonomi dan Bisnis</option>
+                <option value="FPP.html">Fakultas Pariwisata dan Perhotelan</option>
+                <option value="FPK.html">Fakultas Psikologi dan Kesehatan</option>
+                <option value="FK.html">Fakultas Kedokteran</option>
+                <option value="SPS.html">Sekolah Pasca Sarjana</option>
+                <option value="Vokasi.html">Sekolah Vokasi</option>
+            </select>
+        </div>
+    </div>
+
+    <h3>Universitas Negeri Padang <br> Laporan Penerimaan Mahasiswa Baru <br> Tahun Ajaran 2025/2026 </h3>
+    <img src="logounp.png" alt="Logo UNP" class="logo">
+    <h3>Fakultas Ilmu Keolahragaan</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nomor</th>
+                <th>Nomor Pendaftaran</th>
+                <th>Nama Mahasiswa</th>
+                <th>Jenis Kelamin</th>
+                <th>Jalur Masuk</th>
+                <th>Departemen</th>
+                <th>Prodi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>1001</td>
+                <td>Farana Wiranto</td>
+                <td>Perempuan</td>
+                <td>SNBT</td>
+                <td>Kepelatihan</td>
+                <td>Pendidikan Kepelatihan</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>1002</td>
+                <td>Rasya Maulana</td>
+                <td>Laki-laki</td>
+                <td>Mandiri</td>
+                <td>Kepelatihan</td>
+                <td>Pendidikan Kepelatihan</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>1003</td>
+                <td>Lionel Messi</td>
+                <td>Laki-laki</td>
+                <td>SNBP</td>
+                <td>Pendidikan Olahraga</td>
+                <td>Pendidikan Jasmani, Kesehatan, dan Rekreasi</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>1004</td>
+                <td>Cristiano Ronaldo</td>
+                <td>Laki-laki</td>
+                <td>SNBP</td>
+                <td>Kesehatan dan Rekreasi</td>
+                <td>Ilmu Keolahragaan</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>1005</td>
+                <td>Susi Susanti</td>
+                <td>Perempuan</td>
+                <td>SNBT</td>
+                <td>Kepelatihan</td>
+                <td>Pendidikan Kepelatihan</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
